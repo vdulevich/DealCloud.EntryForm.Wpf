@@ -3,7 +3,7 @@ using System;
 using System.Collections.ObjectModel;
 using System.Windows.Controls;
 
-namespace Wpf_RichText.Features.EntryForm.Fields
+namespace DealCloud.EntryForm.Wpf.Fields
 {
     public partial class EntryFieldSelect : UserControl
     {

@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using Telerik.Windows.Controls;
 
-namespace Wpf_RichText
+namespace DealCloud.EntryForm.Wpf
 {
-    public class MainWindowViewModel : ViewModelBase
+    public class EntryFormViewModel: ViewModelBase
     {
         private List<Field> _fields;
         public List<Field> Fields
@@ -13,7 +13,7 @@ namespace Wpf_RichText
             set { _fields = value; OnPropertyChanged(nameof(Fields)); }
         }
 
-        public MainWindowViewModel()
+        public EntryFormViewModel()
         {
             Fields = new List<Field>() {
                 new Field() { Name = "Text", FieldType = DealCloud.Common.Enums.FieldTypes.Text },

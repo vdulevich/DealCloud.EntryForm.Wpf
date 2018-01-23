@@ -3,34 +3,39 @@ using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
 
-namespace Wpf_RichText.Features.EntryForm
+namespace DealCloud.EntryForm.Wpf
 {
     public partial class EntryFormComponent : UserControl
     {
-        public static readonly DependencyProperty FieldsProperty = DependencyProperty.Register("Fields", typeof(List<Field>), typeof(EntryFormComponent), new PropertyMetadata(new List<Field>(), FieldsPropertyChanged));
+        public static readonly DependencyProperty FieldsProperty = DependencyProperty.Register(
+            "ListId", 
+            typeof(int), 
+            typeof(EntryFormComponent), 
+            new PropertyMetadata(-1, ListIdPropertyChanged));
 
-        private static void FieldsPropertyChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        private static void ListIdPropertyChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
             EntryFormComponent entryForm = d as EntryFormComponent;
             entryForm.InitializaControls();
         }
 
-        public List<Field> Fields
+        public int ListId
         {
-            get { return (List<Field>)GetValue(FieldsProperty); }
+            get { return (int)GetValue(FieldsProperty); }
             set { SetValue(FieldsProperty, value); }
         }
 
         public EntryFormComponent()
         {
             InitializeComponent();
+            InitializaControls();
         }
 
         private void InitializaControls()
         {
             LayoutRoot.Children.Clear();
             LayoutRoot.RowDefinitions.Clear();
-            foreach (Field field in Fields)
+            foreach (Field field in (DataContext as EntryFormViewModel).Fields)
             {
                 LayoutRoot.RowDefinitions.Add(new RowDefinition() { Height = GridLength.Auto });
                 Label label = new Label() { Content = field.Name, Style = (Style)Resources["nameStyle"] };

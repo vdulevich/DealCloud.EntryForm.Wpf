@@ -1,0 +1,16 @@
+﻿<Window x:Class="DealCloud.EntryForm.Wpf.MainWindow"
+                xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+                xmlns:local="clr-namespace:DealCloud.EntryForm.Wpf"
+                Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <local:EntryFormComponent ListId="10" Grid.Row="0"/>
+    </Grid>
+</Window>
