@@ -1,0 +1,13 @@
+﻿<UserControl x:Class="Wpf_RichText.Features.EntryForm.Fields.EntryFieldSelect"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+             MinWidth="150">
+    <Grid>
+        <telerik:RadAutoCompleteBox
+            Name="entriesCombobox"
+            DisplayMemberPath="Name"
+            ItemsSource="{Binding Items}"
+            />
+    </Grid>
+</UserControl>

@@ -1,0 +1,354 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7A7DAFF8-C48E-4FEE-8FED-087FB96B6642}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DealCloud.AddIn.Common</RootNamespace>
+    <AssemblyName>DealCloud.AddIn.Common</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>..\Libraries\Signing\DealCloud.Key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.mshtml, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Tools, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Tools.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Tools.Common.v4.0.Utilities, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.Office.Tools.Word, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Tools.Applications.Runtime, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\packages\NLog.4.4.12\lib\net45\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="Office, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>C:\Program Files (x86)\Microsoft Visual Studio 14.0\Visual Studio Tools for Office\PIA\Office14\Office.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="stdole, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controls\Common\ButtonExt.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Common\CheckListBoxExt.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Common\ComboBoxCheckListExt.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Common\ComboBoxToolStripExt.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Common\ComboBoxTreeExt.cs" />
+    <Compile Include="Controls\Common\ControlExt.cs" />
+    <Compile Include="Controls\Common\DataGridViewExt.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Common\DataGridViewImageButtonCellExt.cs" />
+    <Compile Include="Controls\Common\FormExt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\Common\FormExt.Designer.cs">
+      <DependentUpon>FormExt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Common\FormHeaderExt.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Common\FormHeaderExt.Designer.cs">
+      <DependentUpon>FormHeaderExt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Common\LabelExt.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Common\ListViewExt.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Common\TableLayoutPanelExt.cs" />
+    <Compile Include="Controls\Common\TreeNodeExt.cs" />
+    <Compile Include="Controls\Common\UserControlExt.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\LoadingErrorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\LoadingErrorControl.Designer.cs">
+      <DependentUpon>LoadingErrorControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Common\Theme.cs" />
+    <Compile Include="Controls\ReportDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\ReportDialog.Designer.cs">
+      <DependentUpon>ReportDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ReportPreviewDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\ReportPreviewDialog.Designer.cs">
+      <DependentUpon>ReportPreviewDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\BaseOverlayFormExtUtil.cs" />
+    <Compile Include="Utils\ByteExt.cs" />
+    <Compile Include="Utils\CheckListBoxExt.cs" />
+    <Compile Include="Utils\ExceptionExt.cs" />
+    <Compile Include="Utils\CookieContainerExt.cs" />
+    <Compile Include="Utils\ErrorMessageBaseUtil.cs" />
+    <Compile Include="Utils\LoadingErrorFormExtUtil.cs" />
+    <Compile Include="Utils\LoadingFormExtUtil.cs" />
+    <Compile Include="Utils\LoadingControlUtil.cs" />
+    <Compile Include="Utils\LoadingGridViewUtil.cs" />
+    <Compile Include="Controls\Common\ProgressBarExt.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\SeachControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\SeachControl.Designer.cs">
+      <DependentUpon>SeachControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Common\TextBoxExt.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Common\TreeViewExt.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Entities\CurrencySetting.cs" />
+    <Compile Include="Utils\AddinCacheInfoProvider.cs" />
+    <Compile Include="Utils\DataProviderBase.cs" />
+    <Compile Include="Utils\EnumExtensionsExt.cs" />
+    <Compile Include="Utils\BaseLoadingControlUtil.cs" />
+    <Compile Include="Controls\MessageDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\MessageDialog.Designer.cs">
+      <DependentUpon>MessageDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MessageDialogError.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\MessageDialogError.Designer.cs">
+      <DependentUpon>MessageDialogError.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\QueryBuilderDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\QueryBuilderDialog.Designer.cs">
+      <DependentUpon>QueryBuilderDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Common\ComboBoxExt.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Utils\ConfigurationUtil.cs" />
+    <Compile Include="Utils\HttpClientUtil.cs" />
+    <Compile Include="Application\IContext.cs" />
+    <Compile Include="Commands\Command.cs" />
+    <Compile Include="Commands\CommandResult.cs" />
+    <Compile Include="Commands\ICommand.cs" />
+    <Compile Include="Controller\Controller.cs" />
+    <Compile Include="Controller\View.cs" />
+    <Compile Include="Controls\LoadingControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\LoadingControl.Designer.cs">
+      <DependentUpon>LoadingControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\LoginDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\LoginDialog.Designer.cs">
+      <DependentUpon>LoginDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Common\WebBrowserExt.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\ActivityUtil.cs" />
+    <Compile Include="Utils\CookieUtil.cs" />
+    <Compile Include="Utils\HtmlDocumentExt.cs" />
+    <Compile Include="Utils\NativeWindowAssignHandle.cs" />
+    <Compile Include="Utils\PageOffsetList.cs" />
+    <Compile Include="Utils\PictureConverter.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Utils\RegistryUtil.cs" />
+    <Compile Include="Utils\ReportUtil.cs" />
+    <Compile Include="Utils\RibbonExt.cs" />
+    <Compile Include="Utils\SizeExt.cs" />
+    <Compile Include="Utils\SortableBindingList.cs" />
+    <Compile Include="Utils\StringBuilderExt.cs" />
+    <Compile Include="Utils\TaskExt.cs" />
+    <Compile Include="Utils\TreeViewNodesExt.cs" />
+    <Compile Include="Utils\UriExt.cs" />
+    <Compile Include="Utils\ValidationUtil.cs" />
+    <Compile Include="Utils\VbaUtil.cs" />
+    <Compile Include="Utils\WinApi.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controls\Common\FormExt.resx">
+      <DependentUpon>FormExt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Common\FormHeaderExt.resx">
+      <DependentUpon>FormHeaderExt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\LoadingControl.resx">
+      <DependentUpon>LoadingControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\LoginDialog.resx">
+      <DependentUpon>LoginDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\MessageDialog.resx">
+      <DependentUpon>MessageDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\MessageDialogError.resx">
+      <DependentUpon>MessageDialogError.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\QueryBuilderDialog.resx">
+      <DependentUpon>QueryBuilderDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ReportDialog.resx">
+      <DependentUpon>ReportDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ReportPreviewDialog.resx">
+      <DependentUpon>ReportPreviewDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\SeachControl.resx">
+      <DependentUpon>SeachControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Libraries\Signing\DealCloud.Key.snk">
+      <Link>DealCloud.Key.snk</Link>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Resources\loading.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DealCloud.Common\DealCloud.Common.csproj">
+      <Project>{99fc9981-8f3a-4909-860d-0d9c962a6fab}</Project>
+      <Name>DealCloud.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\error_m.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh_m.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\error_m_red.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="SHDocVw">
+      <Guid>{EAB22AC0-30C1-11CF-A7EB-0000C05BAE0B}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>1</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\load_s.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search_m.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close_white_l.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder_m.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loading_blue.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dealcloud_l.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\report_m.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\log_file_m.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

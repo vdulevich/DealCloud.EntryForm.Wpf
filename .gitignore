@@ -1,0 +1,7 @@
+# Directory lib
+lib
+
+.vs/
+packages/
+bin/
+obj/

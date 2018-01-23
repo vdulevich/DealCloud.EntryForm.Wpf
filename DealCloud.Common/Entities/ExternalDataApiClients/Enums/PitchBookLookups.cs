@@ -1,0 +1,29 @@
+﻿namespace DealCloud.Common.Entities.ExternalDataApiClients.Enums
+{
+    public enum PitchBookLookups
+    {
+        AustralianTerritory,
+        BackingStatus,
+        Country,
+        Currency,
+        DealStatus,
+        DealType,
+        Department,
+        FirmType,
+        FundStatus,
+        FundType,
+        Industry,
+        InvestmentPreference,
+        InvestorType,
+        OwnershipsStatus,
+        PersonStatus,
+        PositionLevel,
+        PreferredDealType,
+        Province,
+        Region,
+        State,
+        UKTerritory,
+        USArea,
+        Verticals
+    }
+}

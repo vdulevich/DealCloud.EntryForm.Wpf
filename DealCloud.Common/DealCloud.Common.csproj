@@ -1,0 +1,263 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{99FC9981-8F3A-4909-860D-0D9C962A6FAB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DealCloud.Common</RootNamespace>
+    <AssemblyName>DealCloud.Common</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>..\Libraries\Signing\DealCloud.Key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CommonServiceLocator, Version=2.0.2.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.5.5.5\lib\net45\CommonServiceLocator.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\packages\NLog.4.4.12\lib\net45\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog.Extended, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\packages\NLog.Extended.4.0.0.1\lib\net45-full\NLog.Extended.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Unity.Abstractions, Version=3.1.2.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.5.5.5\lib\net45\Unity.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Configuration, Version=5.1.3.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.5.5.5\lib\net45\Unity.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Container, Version=5.5.5.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.5.5.5\lib\net45\Unity.Container.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Interception, Version=5.3.0.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.5.5.5\lib\net45\Unity.Interception.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Interception.Configuration, Version=5.1.3.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.5.5.5\lib\net45\Unity.Interception.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RegistrationByConvention, Version=2.1.4.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.5.5.5\lib\net45\Unity.RegistrationByConvention.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ServiceLocation, Version=2.1.0.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.5.5.5\lib\net45\Unity.ServiceLocation.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Attributes\PropertyNamesAttribute.cs" />
+    <Compile Include="Attributes\SanitizeAttribute.cs" />
+    <Compile Include="Cache\DateTimeVersion.cs" />
+    <Compile Include="Entities\AddInCommon\EntryList.cs" />
+    <Compile Include="Entities\AddInCommon\Field.cs" />
+    <Compile Include="Entities\AddInCommon\OutlookSyncHelper.cs" />
+    <Compile Include="Entities\AddInCommon\OutlookSyncItemType.cs" />
+    <Compile Include="Entities\AddInCommon\SystemFieldTypes.cs" />
+    <Compile Include="Entities\AddInCommon\UserInfo.cs" />
+    <Compile Include="Entities\AddInExcel\ExcelCellValue.cs" />
+    <Compile Include="Entities\AddInExcel\ExcelFilterVm.cs" />
+    <Compile Include="Entities\AddInExcel\ExcelLibraryViewVm.cs" />
+    <Compile Include="Entities\AddInOutlook\ContactDetailsResquest.cs" />
+    <Compile Include="Entities\AddInOutlook\ContactDetailsResponse.cs" />
+    <Compile Include="Entities\AddInOutlook\EmailDetailsRequest.cs" />
+    <Compile Include="Entities\AddInOutlook\EmailDetailsResponse.cs" />
+    <Compile Include="Entities\AddInOutlook\EventDetailsRequest.cs" />
+    <Compile Include="Entities\AddInOutlook\SyncEmailRequest.cs" />
+    <Compile Include="Entities\AddInOutlook\EventDetailsResponse.cs" />
+    <Compile Include="Entities\AddInOutlook\SycnRequestItem.cs" />
+    <Compile Include="Entities\AddInOutlook\SyncContactsRequest.cs" />
+    <Compile Include="Entities\AddInOutlook\SyncEventsRequest.cs" />
+    <Compile Include="Entities\AddInOutlook\SyncItemError.cs" />
+    <Compile Include="Entities\AddInOutlook\SyncResponse.cs" />
+    <Compile Include="Entities\AddInOutlook\SyncResponseItem.cs" />
+    <Compile Include="Entities\AddInWord\TemplateReportResponce.cs" />
+    <Compile Include="Entities\AddInWord\TemplateSchedule.cs" />
+    <Compile Include="Entities\AddInWord\CheckInTemplateReportResponce.cs" />
+    <Compile Include="Entities\AddInWord\CheckOutTemplateReportResponce.cs" />
+    <Compile Include="Entities\AddInWord\RunTemplateReportRequest.cs" />
+    <Compile Include="Entities\AddInWord\TemplateReportVersion.cs" />
+    <Compile Include="Entities\ErrorReport.cs" />
+    <Compile Include="Entities\ExternalDataApiClients\Enums\PitchBookLookups.cs" />
+    <Compile Include="Entities\ExternalDataApiClients\LookupItem.cs" />
+    <Compile Include="Entities\ExternalDataApiClients\PitchBook\CompanySearchModel.cs" />
+    <Compile Include="Entities\GroupCount.cs" />
+    <Compile Include="Entities\IncomingEmail\ContactEntry.cs" />
+    <Compile Include="Entities\LibraryView.cs" />
+    <Compile Include="Entities\LibraryViewRequest.cs" />
+    <Compile Include="Entities\LibraryViewSortBy.cs" />
+    <Compile Include="Entities\List\ChoiceFieldValue.cs" />
+    <Compile Include="Entities\MenuEntry.cs" />
+    <Compile Include="Entities\Money.cs" />
+    <Compile Include="Entities\PagedRequest.cs" />
+    <Compile Include="Entities\Query\QueryContext.cs" />
+    <Compile Include="Entities\Query\QueryExtentions.cs" />
+    <Compile Include="Entities\Settings\EntryCapabilitySettings.cs" />
+    <Compile Include="Entities\Settings\UserCapabilitySettings.cs" />
+    <Compile Include="Entities\Settings\GridSettings.cs" />
+    <Compile Include="Enums\IpRestrictionType.cs" />
+    <Compile Include="Enums\AddinTypes.cs" />
+    <Compile Include="Enums\DayOfWeekFlags.cs" />
+    <Compile Include="Enums\ListNameTypes.cs" />
+    <Compile Include="Enums\SortDirection.cs" />
+    <Compile Include="Enums\SycnRequestItemState.cs" />
+    <Compile Include="Enums\TemplateReportCreateDocumentEntryWhen.cs" />
+    <Compile Include="Enums\TemplateReportVersionType.cs" />
+    <Compile Include="Extensions\EnumExt.cs" />
+    <Compile Include="Extensions\ExceptionExtensions.cs" />
+    <Compile Include="Helpers\EmailParseHelper.cs" />
+    <Compile Include="Helpers\EntryListDataHelper.cs" />
+    <Compile Include="Helpers\ReportService.cs" />
+    <Compile Include="Interfaces\IReportService.cs" />
+    <Compile Include="Validators\GridSettingsValidator.cs" />
+    <Compile Include="Validators\IValidator.cs" />
+    <Compile Include="Mappers\GridSettingsMapper.cs" />
+    <Compile Include="Mappers\PropertyNamesMapper.cs" />
+    <Compile Include="Serialization\Binders\KnownTypesBinder.cs" />
+    <Compile Include="Cache\CacheService.cs" />
+    <Compile Include="Cache\KeyVersionTags.cs" />
+    <Compile Include="Cache\VersionedTimeoutReference.cs" />
+    <Compile Include="Entities\CellRequestGet.cs" />
+    <Compile Include="Entities\CellRequestBase.cs" />
+    <Compile Include="Entities\CellRequestDelete.cs" />
+    <Compile Include="Entities\CellRequestDCView.cs" />
+    <Compile Include="Entities\CellRequestStore.cs" />
+    <Compile Include="Entities\CellValue.cs" />
+    <Compile Include="Entities\ColumnMetadata.cs" />
+    <Compile Include="Entities\EntryForm\EntryFormInfo.cs" />
+    <Compile Include="Entities\EntryForm\EntryFormTab.cs" />
+    <Compile Include="Entities\ExtendedResult.cs" />
+    <Compile Include="Entities\DDLSelectors.cs" />
+    <Compile Include="Entities\LinkField.cs" />
+    <Compile Include="Entities\Query\Filters\FilterGroup.cs" />
+    <Compile Include="Entities\Query\Filters\FilterResults.cs" />
+    <Compile Include="Entities\Query\Filters\NumericFilter.cs" />
+    <Compile Include="Entities\Query\Filters\ParameterFilter.cs" />
+    <Compile Include="Entities\Query\Filters\SmartFilter.cs" />
+    <Compile Include="Entities\Query\Filters\TextFilter.cs" />
+    <Compile Include="Entities\Query\PivotInfo.cs" />
+    <Compile Include="Entities\Reference.cs" />
+    <Compile Include="Entities\SearchEntryResult.cs" />
+    <Compile Include="Entities\Wildcard.cs" />
+    <Compile Include="Entities\ErrorInfo.cs" />
+    <Compile Include="Entities\Frequency.cs" />
+    <Compile Include="Entities\PagedResult.cs" />
+    <Compile Include="Entities\QueryResult.cs" />
+    <Compile Include="Entities\Query\QueryInfo.cs" />
+    <Compile Include="Entities\Row.cs" />
+    <Compile Include="Entities\Query\PageInfo.cs" />
+    <Compile Include="Entities\Query\FilterInfo.cs" />
+    <Compile Include="Entities\Query\GroupInfo.cs" />
+    <Compile Include="Entities\Query\SortInfo.cs" />
+    <Compile Include="Entities\AddInWord\TemplateReport.cs" />
+    <Compile Include="Entities\AddInWord\TemplateReportBase.cs" />
+    <Compile Include="Entities\AddInWord\TemplateDocument.cs" />
+    <Compile Include="Entities\AddInWord\TemplateProperties.cs" />
+    <Compile Include="Entities\UpdateResult.cs" />
+    <Compile Include="Enums\CapabilityCategories.cs" />
+    <Compile Include="Enums\Capabilities.cs" />
+    <Compile Include="Enums\ChartType.cs" />
+    <Compile Include="Enums\ColumnAggregation.cs" />
+    <Compile Include="Enums\DateAggreagtionTypes.cs" />
+    <Compile Include="Enums\DocumentFormat.cs" />
+    <Compile Include="Enums\DynamicDates.cs" />
+    <Compile Include="Enums\ErrorTypes.cs" />
+    <Compile Include="Enums\FieldFormatTypes.cs" />
+    <Compile Include="Enums\FieldTypes.cs" />
+    <Compile Include="Enums\PivotDisplayType.cs" />
+    <Compile Include="Enums\RecurrenceType.cs" />
+    <Compile Include="Enums\EntryListTypes.cs" />
+    <Compile Include="Enums\ReportFileType.cs" />
+    <Compile Include="Enums\TemplateReportType.cs" />
+    <Compile Include="Extensions\DateTimeExtensions.cs" />
+    <Compile Include="Extensions\IdExtentions.cs" />
+    <Compile Include="Extensions\IEnumerableExtensions.cs" />
+    <Compile Include="Extensions\JsonReaderExtension.cs" />
+    <Compile Include="Extensions\StringExtentions.cs" />
+    <Compile Include="Extensions\TypeExtension.cs" />
+    <Compile Include="Extensions\DictionaryExtensions.cs" />
+    <Compile Include="Helpers\FuncComparer.cs" />
+    <Compile Include="Interfaces\ICache.cs" />
+    <Compile Include="Interfaces\ICacheInfoProvider.cs" />
+    <Compile Include="Interfaces\ICacheVersionHelper.cs" />
+    <Compile Include="Cache\LruCache.cs" />
+    <Compile Include="Cache\MemoizingCache.cs" />
+    <Compile Include="Cache\TimeoutReference.cs" />
+    <Compile Include="Cache\VersionHelper.cs" />
+    <Compile Include="Constants\Constants.cs" />
+    <Compile Include="Entities\NamedEntry.cs" />
+    <Compile Include="Enums\EntryLists.cs" />
+    <Compile Include="Helpers\EnumHelper.cs" />
+    <Compile Include="Interfaces\IDeepClonable.cs" />
+    <Compile Include="Interfaces\IUserContextService.cs" />
+    <Compile Include="IoContainer\IoContainer.cs" />
+    <Compile Include="Logging\CustomLayouts.cs" />
+    <Compile Include="Logging\LogCall.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Serialization\DictionaryJsonConverter.cs" />
+    <Compile Include="Serialization\SerializationHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Entities\Menu\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Libraries\Signing\DealCloud.Key.snk">
+      <Link>DealCloud.Key.snk</Link>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
